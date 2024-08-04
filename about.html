@@ -1,9 +1,3 @@
-<!-- /*
-* Template Name: Property
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,10 +22,9 @@
     <link rel="stylesheet" href="css/tiny-slider.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-    <title>
-      Nirvaana Developers &mdash; about us
-    </title>
+    <title>Nirvaana Developers &mdash; about us</title>
 
     <style>
       /* Style for the logo icon */
@@ -51,7 +44,7 @@
         position: relative;
         overflow: hidden;
       }
-      
+
       .hero-background {
         position: absolute;
         top: 0;
@@ -61,20 +54,23 @@
         display: flex;
         animation: swipe 15s infinite;
       }
-      
+
       .background-slide {
         flex: 0 0 100%;
         height: 100%;
         background-size: cover;
         background-position: center;
       }
-      
+
       @keyframes swipe {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
       }
-      
-    </style>  
+    </style>
   </head>
   <body>
     <div class="site-mobile-menu site-navbar-target">
@@ -91,51 +87,165 @@
         <div class="menu-bg-wrap">
           <div class="site-navigation">
             <a href="index.html" class="logo m-0 float-start">
-              <img src="images/file.png" alt="Logo" class="logo-icon"> <!-- Replace with your icon's filename -->
+              <img src="images/file.png" alt="Logo" class="logo-icon" />
+              <!-- Replace with your icon's filename -->
             </a>
-  
-            <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+
+            <ul
+              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+            >
               <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
               <li>
                 <a href="properties.html">Properties</a>
               </li>
               <li><a href="services.html">Services</a></li>
-              <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
-  
-            <a href="#"
+
+            <a
+              href="#"
               class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
-              data-toggle="collapse" data-target="#main-navbar">
+              data-toggle="collapse"
+              data-target="#main-navbar"
+            >
               <span></span>
             </a>
           </div>
         </div>
       </div>
     </nav>
-  
-    <div class="hero page-inner overlay">
-      <div class="hero-background">
-        <div class="background-slide" style="background-image: url('images/hero_bg_1.jpg')"></div>
-        <div class="background-slide" style="background-image: url('images/hero_bg_2.jpg')"></div>
-        <div class="background-slide" style="background-image: url('images/hero_bg_3.jpg')"></div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-9 text-center mt-5">
-            <h1 class="heading" data-aos="fade-up">About</h1>
-    
-            <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
-              <ol class="breadcrumb text-center justify-content-center">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active text-white-50" aria-current="page">About</li>
-              </ol>
-            </nav>
+
+    <div class="carousel">
+      <!-- list item -->
+      <div class="list">
+        <div class="item">
+          <img src="assets/image/real-1.png" />
+          <div class="content">
+            <div class="title">Nirvaana Developer's</div>
+            <div class="topic">About us</div>
+            <div class="des">
+              <!-- lorem 50 -->
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div class="buttons">
+              <button onclick="location.href='about.html'">SEE MORE</button>
+              <button onclick="location.href='contact.html'">CONTACT</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/image/real-2.png" />
+          <div class="content">
+            <div class="title">Nirvaana Developers</div>
+            <div class="topic">Features</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div class="buttons">
+              <button onclick="location.href='feature.html'">SEE MORE</button>
+              <button onclick="location.href='contact.html'">CONTACT</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/image/real-3.png" />
+          <div class="content">
+            <div class="title">Nirvaana Developers</div>
+            <div class="topic">Projects</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div class="buttons">
+              <button onclick="location.href='projects.html'">SEE MORE</button>
+              <button onclick="location.href='contact.html'">CONTACT</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/image/real-4.png" />
+          <div class="content">
+            <div class="title">Nirvaana Developers</div>
+            <div class="topic">Appointment</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+              sequi, rem magnam nesciunt minima placeat, itaque eum neque
+              officiis unde, eaque optio ratione aliquid assumenda facere ab et
+              quasi ducimus aut doloribus non numquam. Explicabo, laboriosam
+              nisi reprehenderit tempora at laborum natus unde. Ut,
+              exercitationem eum aperiam illo illum laudantium?
+            </div>
+            <div class="buttons">
+              <button onclick="location.href='booking.html'">SEE MORE</button>
+              <button onclick="location.href='contact.html'">CONTACT</button>
+            </div>
           </div>
         </div>
       </div>
+      <!-- list thumnail -->
+      <div class="thumbnail">
+        <div class="item">
+          <img src="assets/image/con-1.png" />
+          <div class="content">
+            <div class="title">Name Slider</div>
+            <div class="description">Description</div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/image/con-2.png" />
+          <div class="content">
+            <div class="title">Name Slider</div>
+            <div class="description">Description</div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/image/con-3.png" />
+          <div class="content">
+            <div class="title">Name Slider</div>
+            <div class="description">Description</div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/image/con-4.png" />
+          <div class="content">
+            <div class="title">Name Slider</div>
+            <div class="description">Description</div>
+          </div>
+        </div>
+      </div>
+      <!-- next prev -->
+
+      <div class="arrows">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+      <!-- time running -->
+      <div class="time"></div>
     </div>
-    
+
+    <br>
+    <br>
+
     <div class="section">
       <div class="container">
         <div class="row text-left mb-5">
@@ -606,16 +716,15 @@
     <!-- Preloader -->
     <div id="overlayer"></div>
     <div class="loader">
-      <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
+      <img src="images/file.png" alt="Loading...">
     </div>
-
+  
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>

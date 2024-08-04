@@ -1,9 +1,3 @@
-<!-- /*
-* Template Name: Property
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,6 +38,98 @@
       display: inline-block;
       /* Ensure it behaves like an inline element */
     }
+
+    .main-page {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .main-frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .img-about-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    
+    .img-about {
+      display: flex;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      white-space: nowrap;
+      flex: 1;
+      scroll-snap-type: x mandatory; /* Ensure snap alignment */
+    }
+
+    .img-about::-webkit-scrollbar {
+      display: none;
+    }
+    
+    
+    .img-about img {
+      display: inline-block;
+      width: 80%; /* Adjust this value to reduce image size */
+      max-width: 100%; /* Adjust this value to reduce image size */
+      height: auto;
+      scroll-snap-align: center; /* Align images to the center */
+      flex: 0 0 100%; /* Ensure each image takes up 100% of the container width */
+    }
+    
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 10;
+    }
+    
+    .left-arrow {
+      left: 10px;
+    }
+    
+    .right-arrow {
+      right: 10px;
+    }
+    
+    .see-more-btn {
+      position: absolute;
+      bottom: 10px; /* Position it at the bottom of the container */
+      left: 50%; /* Center horizontally */
+      transform: translateX(-50%); /* Center horizontally */
+      background: rgba(0, 0, 0, 0.7); /* Slightly darker for better visibility */
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 20; /* Ensure it is above other content */
+      display: none; /* Initially hidden */
+    }
+    
+    .img-about-container:hover .see-more-btn {
+      display: block;
+    }
+    
   </style>
 </head>
 
@@ -67,11 +153,11 @@
 
           <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
             <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li>
               <a href="properties.html">Properties</a>
             </li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
 
@@ -85,17 +171,11 @@
     </div>
   </nav>
 
-  <div class="hero">
-    <div class="hero-slide">
-      <video class="hero-video" autoplay muted loop>
-        <source src="video/demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+  <div class="main-page">
+    <div class="main-frame">
+      <iframe src="main.html" style="width: 100%; height: 100%;"></iframe>
     </div>
   </div>
-  <br>
-  <br>
-  <br>
   <br>
   <div class="section">
     <div class="container">
@@ -107,7 +187,7 @@
         </div>
         <div class="col-lg-6 text-lg-end">
           <p>
-            <a href="#" target="_blank" class="btn btn-primary text-white py-3 px-4">View all properties</a>
+            <a href="properties.html" class="btn btn-primary text-white py-3 px-4">View all properties</a>
           </p>
         </div>
       </div>
@@ -562,8 +642,16 @@
       </div>
       <div class="row justify-content-between mb-5">
         <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
-          <div class="img-about dots">
-            <img src="images/hero_bg_3.jpg" alt="Image" class="img-fluid" />
+          <div class="img-about-container">
+            <button class="arrow-btn left-arrow">&lt;</button>
+            <div class="img-about dots">
+              <img src="images/img_1.jpg" alt="Image" class="img-fluid" />
+              <img src="images/img_2.jpg" alt="Image" class="img-fluid" />
+              <img src="images/img_3.jpg" alt="Image" class="img-fluid" />
+              <!-- Add more images as needed -->
+            </div>
+            <button class="arrow-btn right-arrow">&gt;</button>
+            <button class="see-more-btn">See More</button>
           </div>
         </div>
         <div class="col-lg-4">
@@ -640,6 +728,9 @@
     <div class="row justify-content-center footer-cta" data-aos="fade-up">
       <div class="col-lg-7 mx-auto text-center">
         <h2 class="mb-4">Be a part of our growing real state customers</h2>
+        <p>
+          <a href="contact.html" target="_blank" class="btn btn-primary text-white py-3 px-4">Book an Appointment</a>
+        </p>
       </div>
       <!-- /.col-lg-7 -->
     </div>
@@ -851,9 +942,7 @@
   <!-- Preloader -->
   <div id="overlayer"></div>
   <div class="loader">
-    <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
+    <img src="images/file.png" alt="Loading...">
   </div>
 
   <script src="js/bootstrap.bundle.min.js"></script>
@@ -862,6 +951,25 @@
   <script src="js/navbar.js"></script>
   <script src="js/counter.js"></script>
   <script src="js/custom.js"></script>
+  <script>
+    const imgContainer = document.querySelector('.img-about');
+const scrollAmount = 300; // Adjust this value as needed
+
+document.querySelector('.left-arrow').addEventListener('click', () => {
+  imgContainer.scrollBy({
+    left: -scrollAmount,
+    behavior: 'smooth'
+  });
+});
+
+document.querySelector('.right-arrow').addEventListener('click', () => {
+  imgContainer.scrollBy({
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+});
+
+  </script>
 </body>
 
 </html>
